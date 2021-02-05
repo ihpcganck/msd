@@ -219,7 +219,7 @@ program sample
   write(*,'(A)') 'dir is '//trim(dir)
   absparfile=trim(dir)//'/'//trim(parfile)
   write(*,'(A)') 'To open the file '//trim(absparfile)
-  open(absparu,file=trim(absparfile),action='read')
+  open(absparu,file=trim(absparfile),status='old',action='read')
   write(*,'(A)') trim(absparfile)//' is opened.'
   close(absparu)
   write(*,'(A)') trim(absparfile)//' is immediately closed.'
